@@ -1,0 +1,210 @@
+/* variáveis de cor */
+:root {
+    /* escala rosa */
+    --color-pink12: #76314E;
+    --color-pink11: #B00A4F;
+    --color-pink10: #C82166;
+    --color-pink9:  #D32D72;
+    --color-pink8:  #E0397E;
+    --color-pink7:  #ED4A8D;
+    --color-pink6:  #F65B9B;
+    --color-pink5:  #FF72AC;
+    --color-pink4:  #FF8ABA;
+    --color-pink3:  #FFADCF;
+    --color-pink2:  #FFC2DB;
+    --color-pink1:  #FFDEEC;
+    --color-pink0:  #FFEFF6;
+    --color-white:  #ffffff;
+
+    /* escala cinza */
+    --color-black:   #000000;
+    --color-cinza11: #121212;
+    --color-cinza10: #2E2E2E;
+    --color-cinza9:  #404040;
+    --color-cinza8:  #595959;
+    --color-cinza7:  #717171;
+    --color-cinza6:  #9C9C9C;
+    --color-cinza5:  #B2B2B2;
+    --color-cinza4:  #CCCCCC;
+    --color-cinza3:  #DEDEDE;
+    --color-cinza2:  #EDEDED;
+    --color-cinza1:  #F7F7F7;
+
+    /* escala amarelo */
+    --color-yellow9: #D2C61C;
+    --color-yellow8: #E4D827;
+    --color-yellow7: #F4E735;
+    --color-yellow6: #FFF243;
+    --color-yellow5: #FFF463;
+    --color-yellow4: #FFF787;
+    --color-yellow3: #FFF9A9;
+    --color-yellow2: #FFFBC0;
+    --color-yellow1: #FFFDDB;
+    --color-yellow0: #FFFEED;
+}
+
+/* imagem do menu */
+.logo_header img {
+    /* largura imagem */
+    width: 45px;
+}
+
+/* bloco que envolve o menu e os itens dentro do menu */
+.header, 
+.navigation_header {
+
+    /* mantem os itens em linha */
+    display: flex;
+    flex-direction: row;
+
+    /* alinhamento na horizontal */
+    align-items: center;
+}
+
+/* cor de fundo menu superior */
+.header {
+
+    /* cor de fundo */
+    background-color: var(--color-pink11);
+
+    /* sombra abaixo do menu superior */
+    box-shadow: 2px 2px 4px var(--color-pink10);
+
+    /* altura do menu */
+    height: 60px;
+
+    /* espaçamento entre a imagem e os elementos do menu nos estremos da pagina*/
+    justify-content: space-between;
+
+    /* margin interna dos elementos */
+    padding: 0 10%;
+    
+}
+
+/* links das paginas do menu */
+.navigation_header {
+    /* espaçamento entre os links */
+    gap: 3em;
+    /* posição do conteúdo */
+    z-index: 2;
+}
+
+
+
+/* falando diretamente com cada link */
+.navigation_header a {
+
+    /* remover decoração padrao */
+    text-decoration: none;
+
+    /* cor fonte */
+    color: var(--color-pink1);
+
+    /* efeito ao abrir a pagina */
+    transition: 0.7s;
+
+    /* negrito */
+    font-weight: bold;
+}
+
+/* efeito ao passar o mouse nos links */
+.navigation_header a:hover {
+    /* cor fonte */
+    color: var(--color-pink12);
+
+    /* cor fundo */
+    background-color: var(--color-pink1);
+
+    /* negrito */
+    font-weight: bold;
+
+    /* margin interna */
+    padding: 10px;
+
+    /* borda arredondada */
+    border-radius: 10px;
+}
+
+/* botoes */
+.btn_icon_header {
+
+    /* cor de fundo */
+    background-color: transparent;
+
+    /* remover borda */
+    border: none;
+
+    /* cor do elemento */
+    color: var(--color-white);
+
+    /* mudar cursor mouse */
+    cursor: pointer;
+
+    /* esconder os botoes */
+    display: none;
+}
+
+/* estilo do link no menu quando estiver na página selecionada */
+.active {
+    /* cor de fundo */
+    background-color: var(--color-pink7);
+
+    /* margin interna */
+    padding: 10px;
+
+    /* borda arredondada */
+    border-radius: 10px;
+    
+}
+
+/* quando a tela for menor que o valor de 768px
+quebrar o menu superior para o menu lateral */
+@media (max-width: 768px) {
+
+    /* remover os itens do menu superior
+    para o menu lateral */
+    .navigation_header {
+        
+        /* os elementos do menu superior ficam "soltos" na pagina */
+        position: absolute;
+
+        /* coloca os elementos do menu em coluna */
+        flex-direction: column;
+
+        /* alinha o menu no topo da pagina */
+        top: 0;
+
+        /* define a cor de fundo do menu */
+        background-color: var(--color-pink9);
+
+        /* altura de 100% da pagina */
+        height: 100%;
+
+        /* largura do menu */
+        width: 35vw;
+
+        /* margin interna */
+        padding: 1em;
+
+        /* tempo de animação da abertura do menu lateral */
+        transition: 1.3s;
+
+        /* esconde o menu na esquerda da pagina
+        sera mostrado pelo JAVASCRIPT */
+        margin-left: -100vw;
+    }
+
+    /* mostra os botões do menu lateral */
+    .btn_icon_header  {
+        display: block;
+    }
+
+}
+
+/* efeito que move o menu para a direita quando o usuário deseja abrir */
+@keyframes showSideBar {
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
+}
+
+

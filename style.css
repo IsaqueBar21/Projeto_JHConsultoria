@@ -1,0 +1,86 @@
+/* importa o estilo do menu */
+@import url(menu.css);
+
+/* variáveis de cor */
+:root {
+    /* escala rosa */
+    --color-pink12: #76314E;
+    --color-pink11: #B00A4F;
+    --color-pink10: #C82166;
+    --color-pink9:  #D32D72;
+    --color-pink8:  #E0397E;
+    --color-pink7:  #ED4A8D;
+    --color-pink6:  #F65B9B;
+    --color-pink5:  #FF72AC;
+    --color-pink4:  #FF8ABA;
+    --color-pink3:  #FFADCF;
+    --color-pink2:  #FFC2DB;
+    --color-pink1:  #FFDEEC;
+    --color-pink0:  #FFEFF6;
+    --color-white:  #ffffff;
+
+    /* escala cinza */
+    --color-black:   #000000;
+    --color-cinza11: #121212;
+    --color-cinza10: #2E2E2E;
+    --color-cinza9:  #404040;
+    --color-cinza8:  #595959;
+    --color-cinza7:  #717171;
+    --color-cinza6:  #9C9C9C;
+    --color-cinza5:  #B2B2B2;
+    --color-cinza4:  #CCCCCC;
+    --color-cinza3:  #DEDEDE;
+    --color-cinza2:  #EDEDED;
+    --color-cinza1:  #F7F7F7;
+
+    /* escala amarelo */
+    --color-yellow9: #D2C61C;
+    --color-yellow8: #E4D827;
+    --color-yellow7: #F4E735;
+    --color-yellow6: #FFF243;
+    --color-yellow5: #FFF463;
+    --color-yellow4: #FFF787;
+    --color-yellow3: #FFF9A9;
+    --color-yellow2: #FFFBC0;
+    --color-yellow1: #FFFDDB;
+    --color-yellow0: #FFFEED;
+}
+
+/* estilos em todo o documento */
+*{
+    /* remover margin e padding padrao do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* estilo corpo do documento */
+body {
+    /* estilo de fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    /* cor de fundo */
+    background-color: var(--color-white);
+}
+
+/* conteudo pagina */
+.content {
+    /* alinhamento texto */
+    text-align: left;
+
+    /* margin texto */
+    margin-left: 5%;
+    padding-top: 5em;
+
+    /* tamanho da fonte */
+    font-size: 14px;
+
+    /* cor da fonte */
+    color: var(--color-pink10);
+
+    /* efeito para deixar o conteudo opaco ao abrir o menu */
+    transition: 1s;
+
+    /* altura do conteudo */
+    height: 500px;
+}
+
+
